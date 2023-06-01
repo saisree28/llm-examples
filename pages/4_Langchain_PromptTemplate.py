@@ -1,29 +1,33 @@
 import streamlit as st
-from langchain.llms import OpenAI
+from langchain_community.llms import Ollama
 from langchain.prompts import PromptTemplate
 
-st.title("🦜🔗 Langchain - Blog Outline Generator App")
+st.title("🦜🔗 LangChain - Blog Outline Generator (Local LLM)")
 
-openai_api_key = st.sidebar.text_input("OpenAI API Key", type="password")
-
+# Initialize local LLM
+llm = Ollama(model="mistral")  # or "mistral"
 
 def blog_outline(topic):
-    # Instantiate LLM model
-    llm = OpenAI(model_name="text-davinci-003", openai_api_key=openai_api_key)
-    # Prompt
-    template = "As an experienced data scientist and technical writer, generate an outline for a blog about {topic}."
-    prompt = PromptTemplate(input_variables=["topic"], template=template)
-    prompt_query = prompt.format(topic=topic)
-    # Run LLM model
-    response = llm(prompt_query)
-    # Print results
+    template = (
+        "As an experienced data scientist and technical writer, "
+        "generate a clear and structured outline for a blog about {topic}."
+    )
+
+    prompt = PromptTemplate(
+        input_variables=["topic"],
+        template=template
+    )
+
+    formatted_prompt = prompt.format(topic=topic)
+
+    response = llm.invoke(formatted_prompt)
+
     return st.info(response)
 
 
 with st.form("myform"):
-    topic_text = st.text_input("Enter prompt:", "")
+    topic_text = st.text_input("Enter topic:", "")
     submitted = st.form_submit_button("Submit")
-    if not openai_api_key:
-        st.info("Please add your OpenAI API key to continue.")
-    elif submitted:
+
+    if submitted and topic_text:
         blog_outline(topic_text)
