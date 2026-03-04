@@ -353,19 +353,20 @@ pip install -r requirements.txt
 
 ### **4. Set Your OpenAI API Key**
 $env:OPENAI_API_KEY="your_api_key_here"  
-# Purpose: The apps need this key to access OpenAI models like GPT-3.5 or GPT-4.
+Purpose: The apps need this key to access OpenAI models like GPT-3.5 or GPT-4.
 
 ### **5. Run the Streamlit Apps**
-# Chatbot
+Chatbot
 streamlit run pages/Chatbot.py
 
-# File Q&A
+File Q&A
 streamlit run pages/File_QA.py
 
-# LangChain Quickstart
+LangChain Quickstart
 streamlit run pages/LangChain_Quickstart.py
 
-# Open your browser at http://localhost:8501 to interact with the apps.
+
+Open your browser at http://localhost:8501 to interact with the apps.
 
 
 
