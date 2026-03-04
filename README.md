@@ -1,20 +1,19 @@
-# LLM vs Chatbot
 
 ## What is LLM?
 The term **LLM** usually refers to a **Large Language Model** in the field of artificial intelligence.
 
-### What it is
+### What it is ?
 - A type of AI system trained on massive amounts of text data.
 - Built using **deep learning techniques**, especially the **Transformer architecture**.
 - Designed to understand, process, and generate human-like language.
 
-### How it works
+### How it works ?
 - **Input embeddings**: Converts words into numerical vectors.
 - **Positional encoding**: Adds information about word order.
 - **Self-attention**: Helps the model understand relationships between words in context.
 - **Training**: Uses billions of parameters and huge datasets to learn grammar, facts, and reasoning patterns.
 
-### What it can do
+### What it can do ?
 - Answer questions conversationally.
 - Write essays, articles, or code.
 - Translate between languages.
