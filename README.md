@@ -213,6 +213,7 @@ A callback that connects LangChain’s agent outputs to **Streamlit’s UI**.
 - **StreamlitCallbackHandler** connects agent reasoning to Streamlit UI, making the process visible and transparent.
 
 
+---
 
 
 # LLM Examples with Streamlit
