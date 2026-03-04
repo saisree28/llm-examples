@@ -357,13 +357,13 @@ Purpose: The apps need this key to access OpenAI models like GPT-3.5 or GPT-4.
 
 ### **5. Run the Streamlit Apps**
 Chatbot
-streamlit run pages/Chatbot.py
+- streamlit run pages/Chatbot.py
 
 File Q&A
-streamlit run pages/File_QA.py
+- streamlit run pages/File_QA.py
 
 LangChain Quickstart
-streamlit run pages/LangChain_Quickstart.py
+- streamlit run pages/LangChain_Quickstart.py
 
 
 Open your browser at http://localhost:8501 to interact with the apps.
